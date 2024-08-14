@@ -1,0 +1,40 @@
+Wireshark - Capture - Packets
+Assigned Graded Assessment (Multiple Choice)
+
+O = Incorrect
+X = Correct
+------------------------------
+1) A new analyst has just joined a company and cant seem to see any packets coming through on Wireshark. What should be done to help the analyst? 
+   O Have the analyst install Wireshark.
+   X Add the analyst to the Wireshark group.
+   O Have the analyst run Wireshark as sudo
+   O Have the analyst log in as root
+To help the analyst view packets on Wireshark, add the analyst to the wireshark group.
+
+2) A team member is looking to capture ethernet traffic on the server. The team member says the traffic is visible, but the capture file cannot be saved. Which is a likely solution?
+   X Stop capturing.
+   O Select the correct network.
+   O Start capturing.
+   O Close the capture file.
+The capture must be stopped before the file can be saved. 
+
+3) A colleague is working on observing only HTTPS packets from an existing capture file. Which filter should be used? 
+   O Capturing filter with http.
+   X Display filter with tcp.port == 443
+   O Display filter with http.
+   O Capture filter with tcp.port == 443
+The display filter with tcp.port == 443 should be used to observe only HTTPS packets from an existing capture file.
+
+4) An analyst has been alerted of strange network activity coming from IP address 18.160.96.85 and has been tasked with locating all the packets containing the IP address in a Wireshark capture. Which filter should be used?
+   O ip.addr = 18.160.96.85 
+   O ip.src == 18.160.96.85 
+   O ip.dst == 18.160.96.85
+   X ip.addr == 18.160.96.85
+The filter ip.addr == 18.160.96.85 is used to locate all of the packets containing the IP address.
+
+5) A server has a lot of traffic on a particular IP address. To observe other packets, the analyst just wants to see those packets not associated with IP address 18.160.96.85. Which filter should be used?
+   X !(ip.addr == 18.160.96.85 ) and tcp.port == 443
+   O (ip.addr != 18.160.96.85) and tcp.port == 80
+   O ! (ip.addr = 18.160.96.85) or tcp.port == 443
+   O (ip.addr != 18.160.96.85 ) or tcp.port == 443
+To observe all other packets not associated with IP address 18.160.96.85, the filter !(ip.addr == 18.160.96.85 ) and tcp.port == 443 should be used.
